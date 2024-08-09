@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<!-- La tête de la page -->
+	<head>
+		<!-- Les tags <meta> -->
+		<meta charset="UTF-8"/>
+		<meta name="language" content="FR_fr"/>
+
+		<script src="lib/jquery-3.6.4.min.js"></script>
+		<script type="text/javascript" src="lib/paper/paper.js"></script>
+
+		<!-- Le titre de la page -->
+		<title>PI INF421</title>
+
+		<!-- Les feuilles de style CSS et l'îcone -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<!-- Corps de la page -->
+	<body>
+		<div id="sidebar">
+			<button id="reset">Nettoyer</button>
+			<button id="load">Charger</button>
+			<button id="save">Enregistrer</button>
+
+			<br /><br /> 
+			<form id="tasks">
+				<fieldset>
+					<legend>Algorithmes : </legend>
+
+					<input type="radio" id="task1" name="task" value="1" autocomplete="off" checked/>
+					<label for="task1">Task 1 (naïf)</label><br />
+
+					<input type="radio" id="task2" name="task" value="2" autocomplete="off"/>
+					<label for="task2">Task 2</label><br />
+
+					<input type="radio" id="task3" name="task" value="3" autocomplete="off"/>
+					<label for="task3">Task 3</label><br />
+
+					<input type="radio" id="task5" name="task" value="5" autocomplete="off"/>
+					<label for="task5">Task 5</label><br />
+
+					<input type="radio" id="task6" name="task" value="6" autocomplete="off"/>
+					<label for="task6">Task 6</label><br />
+				</fieldset>
+			</form>
+
+			<br />
+			<button id="run" disabled>Lancer</button>
+
+			<br /><br />
+			<form>
+				<fieldset id="task_12">
+					<legend>Paramètres : </legend>
+
+					<input type="checkbox" id="task12_centre" name="task12" value="S" autocomplete="off" checked/>
+					<label>Afficher points dans S</label><br />
+
+					<input type="checkbox" id="task12_rays" name="task12" value="ray" autocomplete="off"/>
+					<label>Afficher rayons</label><br />
+
+					<input type="checkbox" id="task12_cur" autocomplete="off" checked/>
+					<label>Afficher point courant</label><br />
+
+					<input type="checkbox" id="task12_cercles" autocomplete="off" disabled checked/>
+					<label>Afficher cercles</label><br />
+					
+					<input type="checkbox" id="task_graphe" autocomplete="off" disabled checked/>
+					<label>Afficher graphe</label><br /><br />
+
+					<label>k :</label><br />
+					<input id="task12_k" type="range" value="1" min="1" max="1" step="1" autocomplete="off" oninput="this.nextElementSibling.value = this.value"/>
+					<output>0</output><br /><br />
+
+					<label>Temps d'attente entre 2 centres :</label><br />
+					<input id="task12_centre_time" type="range" value="3" min="0" max="5" step="0.1" autocomplete="off" oninput="this.nextElementSibling.value = this.value + ' sec'"/>
+					<output>3 sec</output><br /><br />
+
+					<label>Temps d'attente entre 2 rayons :</label><br>
+					<input id="task12_rays_time" type="range" value="0.5" min="0" max="3" step="0.05" autocomplete="off" oninput="this.nextElementSibling.value = this.value + ' sec'"/>
+					<output>0.5 sec</output><br />
+				</fieldset>
+			</form>
+		</div>
+		<canvas id="myCanvas" resize></canvas>
+	</body>
+	<!-- Les fichiers JavaScript -->
+	<script src="script.js"></script>
+	<script src="main.js" canvas="myCanvas"></script>
+</html>

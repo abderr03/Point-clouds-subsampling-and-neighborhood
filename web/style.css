@@ -1,0 +1,26 @@
+canvas[resize] {
+	position: fixed;
+	top: 0%; right: 0%;
+
+	height: 100%;
+	width: 80%;
+
+	cursor: crosshair;
+
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 3px solid rgba(100, 100, 100, 1)
+}
+
+#sidebar {
+	top: 0%; left: 0%;
+
+	font: 10pt "JetBrains Mono", serif;
+	font-weight: 600;
+	text-align: left;
+	white-space: nowrap;
+
+	height: 100%;
+	width: 19.5%;
+}
